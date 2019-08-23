@@ -31,7 +31,7 @@
         color: #333;
         text-shadow: none;
         /* Prevent inheritance from `body` */
-        background-color: #fff;
+        background-color: peachpuff;
         border: .05rem solid #fff;
     }
     /* Base structure */
@@ -40,18 +40,33 @@
     body {
         height: 100%;
         background-color: #333;
+    }
+    
+    body {
+        display: -ms-flexbox;
+        display: flex;
+        color: rgb(77, 11, 11);
+        text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
         background-image: url("../images/spapicture.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
     }
     
-    body {
-        display: -ms-flexbox;
-        display: flex;
+    .transbox {
+        margin: 30px;
+        background-color: #ffffff;
+        opacity: 0.5;
+        border-radius: 25px;
+    }
+    
+    .transbox p {
+        margin: 2%;
+        font-weight: bold;
+        font-size: 1.25rem;
         color: black;
-        text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-        box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+        font-style: italic;
     }
     
     .cover-container {
@@ -64,12 +79,15 @@
     }
     
     .masthead-brand {
+        color: rgb(77, 11, 11);
         margin-bottom: 0;
+        font-size: 3rem;
     }
     
     .nav-masthead .nav-link {
         padding: .25rem 0;
         font-weight: 700;
+        font-size: 1.5rem;
         color: rgba(255, 255, 255, .5);
         background-color: transparent;
         border-bottom: .25rem solid transparent;
@@ -85,7 +103,7 @@
     }
     
     .nav-masthead .active {
-        color: black;
+        color: rgb(77, 11, 11);
         border-bottom-color: white;
     }
     
@@ -115,63 +133,31 @@
         text-align: left;
     }
     /* end of Style for Cover Page Bootstrap template */
-    /* class for any photo credits */
+    /* Card styling */
     
-    .imgRef {
-        text-align: center;
-        font-weight: normal;
-        font-size: 12px;
-    }
-    /* Font Awesome color changes */
-    
-    .fa-pencil-alt {
-        color: darkgoldenrod;
+    .card {
+        border-radius: 25px;
     }
     
-    .fa-binoculars {
-        color: darkblue;
+    .card-body {
+        background-color: peachpuff;
+        border-radius: 25px;
     }
     
-    .fa-trash-alt {
-        color: darkred;
-    }
-    /**********************************/
-    
-    .formContainer {
-        padding: 15px;
-    }
-    
-    .firstRow {
-        font-weight: bold;
-    }
-    
-    .justifycenter {
-        text-align: center;
-        font-weight: bold;
+    #cardText1 {
         font-style: italic;
-        color: rgb(3, 3, 66);
     }
     
-    .btnjustifycenter {
-        text-align: center;
-        font-weight: bold;
-    }
-    
-    #errorMsg {
-        color: red;
-        font-weight: bold;
-    }
-    
-    #msgDiv {
-        color: darkred;
-        font-weight: bold;
-        font-size: 1.1em;
+    #categoryList {
+        color: rgb(77, 11, 11);
+        background-color: rgb(235, 233, 142);
+        margin: 0px;
+        padding: 0px;
     }
     
     #categoryName {
         color: black;
-        font-weight: bold;
-        background-color: rgb(231, 228, 56);
+        background-color: rgb(231, 229, 91);
         margin: 0px;
         padding: 0px;
     }
@@ -179,7 +165,7 @@
     #servicesList {
         color: black;
         font-weight: bold;
-        background-color: rgb(231, 228, 56);
+        background-color: rgb(231, 229, 91);
         margin: 0px;
         padding: 0px;
     }
@@ -187,63 +173,22 @@
     #dropdownMenuButton {
         font-weight: bold;
     }
+    
+    #imgRef {
+        color: black;
+    }
     /* Extra-Small devices (landscape phones, 576px and down) */
     
-    @media (max-width: 576px) {
-        #imgcalculator {
-            background-image: url("../images/calculator_medium.jpg");
-            width: 200px;
-            height: 200px;
-            background-repeat: no-repeat;
-            margin-right: auto;
-            margin-left: auto;
-        }
-    }
+    @media (max-width: 576px) {}
     /* Small devices (landscape phones, 576px and up) */
     
-    @media (min-width: 576px) {
-        #imgcalculator {
-            background-image: url("../images/calculator_medium.jpg");
-            width: 200px;
-            height: 200px;
-            background-repeat: no-repeat;
-            margin-right: auto;
-            margin-left: auto;
-        }
-    }
+    @media (min-width: 576px) {}
     /* Medium devices (tablets, 768px and up) */
     
-    @media (min-width: 768px) {
-        #imgcalculator {
-            background-image: url("../images/calculator_large.jpg");
-            width: 300px;
-            height: 300px;
-            background-repeat: no-repeat;
-            margin-right: auto;
-            margin-left: auto;
-        }
-    }
+    @media (min-width: 768px) {}
     /* Large devices (desktops, 992px and up) */
     
-    @media (min-width: 992px) {
-        #imgcalculator {
-            background-image: url("../images/calculator_large.jpg");
-            width: 300px;
-            height: 300px;
-            background-repeat: no-repeat;
-            margin-right: auto;
-            margin-left: auto;
-        }
-    }
+    @media (min-width: 992px) {}
     /* Extra large devices (large desktops, 1200px and up) */
     
-    @media (min-width: 1200px) {
-        #imgcalculator {
-            background-image: url("../images/calculator_large.jpg");
-            width: 300px;
-            height: 300px;
-            background-repeat: no-repeat;
-            margin-right: auto;
-            margin-left: auto;
-        }
-    }
+    @media (min-width: 1200px) {}

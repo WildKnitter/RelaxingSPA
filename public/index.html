@@ -21,19 +21,18 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="masthead mb-auto">
             <div class="inner">
-                <h3 class="masthead-brand">Dotty's Day Spa</h3>
+                <h1 class="masthead-brand">Dotty's Day Spa</h1>
                 <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link active" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link active" href="index.html">Home</a>
                 </nav>
             </div>
         </header>
 
         <!-- Main Cover Page and button for "View Services" by Category -->
         <main class="inner cover">
-            <h1 class="cover-heading">Dotty's Day Spa</h1>
-            <p class="lead">Come discover your home away from home at Dotty's Day Spa! We offer a wide variety of services, including hair, nail, skin, and body treatments. We now even offer Acupuncture! </p>
+            <div class="transbox">
+                <p>Come discover your home away from home at Dotty's Day Spa! We offer a wide variety of services, including hair, nail, skin, and body treatments. We now even offer Acupuncture! </p>
+            </div>
             <button class="btn btn-lg btn-secondary lead" type="button" id="viewCategories">View Services</button>
         </main>
 
@@ -43,6 +42,7 @@
                 <div class="col-md-6 offset-md-3">
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select a Category</button>
+                        <!-- PLEASE NOTE:  "x-placement" etc. is code generated from Bootstrap, for which the validator is throwing an error. -->
                         <div class="dropdown-menu" id="categoryList">
                         </div>
                     </div>
@@ -54,16 +54,16 @@
         <section class="container container-padded hidden" id="servicesContainer">
             <div class="row">
                 <div class="col-md-6">
-                    <h3 id="categoryName">&nbsp;</h3>
+                    <h2 id="categoryName">&nbsp;</h2>
                     <ul id="servicesList"></ul>
                 </div>
                 <div class="col-md-4 hidden" id="serviceCard">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                            <h4 class="card-title " id="cardTitle">&nbsp;</h4>
-                            <p class="card-text " id="cardText1">&nbsp;</p>
-                            <p class="card-text " id="cardText2">&nbsp;</p>
-                            <p class="card-text " id="cardText3">&nbsp;</p>
+                            <h3 class="card-title" id="cardTitle">&nbsp;</h3>
+                            <p class="card-text" id="cardText1">&nbsp;</p>
+                            <p class="card-text" id="cardText2">&nbsp;</p>
+                            <p class="card-text" id="cardText3">&nbsp;</p>
                         </div>
                     </div>
                 </div>
@@ -72,17 +72,23 @@
 
         <footer class="mastfoot mt-auto">
             <div class="inner">
-                <p>&copy; Pam Belknap 2019</p>
-            </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <p>&copy; Pam Belknap 2019</p>
+                    </div>
+                    <div class="col-md-5">
+                        <p>photo credit: <a id="imgRef" href="http://www.hypnozglam.com" target="_blank">HypnozGlam</a></p>
+                    </div>
+                </div>
         </footer>
-    </div>
+        </div>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous"></script>
-    <!--External js script-->
-    <script src="scripts/servicesspa.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous"></script>
+        <!--External js script-->
+        <script src="scripts/servicesspa.js"></script>
 </body>
 
 </html>
