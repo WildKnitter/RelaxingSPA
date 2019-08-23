@@ -29,6 +29,7 @@ categegory[i].Value
 $(function() {
 
     $("#dropdownMenuButton").hide();
+    $("#categoryName").hide();
     $("#serviceCard").hide();
     // VIEW SERVICES CLICK
     $("#viewCategories").on("click", () => {
@@ -86,6 +87,7 @@ function getServices(category) {
                 } // end of the .each (for each)
             ); // end of services parenthesis
             $("servicesContainer").show();
+            $("#categoryName").show();
         } // end of services function
     ); // end of .getJSON
 } // end of the getServices function
@@ -97,7 +99,7 @@ function getServiceCard(serviceID) {
             let cardText1 = $("#cardText1");
             let cardText2 = $("#cardText2");
             let cardText3 = $("#cardText3");
-            cardTitle.html("service: " + service.ServiceName);
+            cardTitle.html(service.ServiceName);
             cardText1.html(service.Description);
             cardText2.html(service.Minutes);
             cardText3.html("$" + Number(service.Price).toFixed(2));
