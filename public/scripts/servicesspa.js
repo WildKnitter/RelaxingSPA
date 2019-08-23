@@ -101,7 +101,7 @@ function getServiceCard(serviceID) {
             let cardText3 = $("#cardText3");
             cardTitle.html(service.ServiceName);
             cardText1.html(service.Description);
-            cardText2.html(service.Minutes);
+            cardText2.html(service.Minutes + " minutes");
             cardText3.html("$" + Number(service.Price).toFixed(2));
             $("#serviceCard").show();
         } // end of the services function
