@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Page to dynamically create a single page application for the Relaxing SPA Friday project.-->
+
+<head>
+    <link rel="icon" href="images/robicon.png" />
+    <title>Relaxing SPA</title>
+    <!--JavaScript sheet-->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+</head>
+
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">Dotty's Day Spa</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Cover Page and button for "View Services" by Category -->
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading">Dotty's Day Spa</h1>
+            <p class="lead">Come discover your home away from home at Dotty's Day Spa! We offer a wide variety of services, including hair, nail, skin, and body treatments. We now even offer Acupuncture! </p>
+            <p class="lead">
+                <p><button class="btn btn-lg btn-secondary" type="button" id="viewCategories">View Services</button></p>
+            </p>
+        </main>
+
+        <!-- Section to show category dropdown "Select a Category" -->
+        <section class="container container-padded hidden" id="categoryContainer">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <form>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select a Category</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="categoryList">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        </section>
+
+        <!-- Section to show services dropdown -->
+        <section class="container container-padded hidden" id="servicesContainer">
+            <div class="row">
+                <div class="col-md-4 offset-md-2">
+                    <h3 id="categoryName">&nbsp;</h3>
+                    <ul id="servicesList"></ul>
+                </div>
+                <div class="col-md-4 hidden" id="serviceCard">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h4 class="card-title " id="cardTitle">&nbsp;</h4>
+                            <p class="card-text " id="cardText1">&nbsp;</p>
+                            <p class="card-text " id="cardText2">&nbsp;</p>
+                            <p class="card-text " id="cardText3">&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>&copy; Pam Belknap 2019</p>
+            </div>
+        </footer>
+        </div>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+        <!--External js script-->
+        <script src="scripts/servicesspa.js"></script>
+</body>
+
+</html>
