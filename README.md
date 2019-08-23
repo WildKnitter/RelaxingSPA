@@ -1,15 +1,16 @@
 # RelaxingSPA
 Our fifth Friday Project! A site to search for services offered at a premiere spa.  This site uses a Node.js/Express back end and REST API to help manage data services.
 
+![IndexPage](public/images/relaxingspaillustration.jpg?raw=true "IndexPage")
+
 ## Purpose and goals of this site
 - To give information about services offered at a premiere spa.
 
 ## Audience
 - Prospective and Returning Spa Clients  
 - ### What do they want from my site?
-- To search for spa services.
-- To find out details about these services, including:
-- 
+- To search for spa services:  Acupuncture, Body Treatments, Hair Salon, Massage and Bodywork, Nail Salon, and Skin Care.
+- To find out details about these services, including description, price, and time.
 
 ## Server setup and start
 This assumes that the user has Node.js installed globally on their machine.

@@ -5,7 +5,7 @@
 // Author:  Pam Belknap
 
 /*
-Key for understanding how to access the fields in the JSON file:
+Key for understanding the fields in the JSON file:
 service
 service.length
 service[i].ServiceID
@@ -72,6 +72,7 @@ function getServices(category) {
     let servicesList = $("#servicesList");
     servicesList.html("");
 
+    //NOTE: the code below concatenates the category ID to the path
     $.getJSON(`/api/services/bycategory/${category}`, (services) => {
             $.each(services, (index, service) => {
                     $("#servicesList").append($("<li />")
@@ -93,6 +94,7 @@ function getServices(category) {
 } // end of the getServices function
 
 // getServiceCard Function to fill the card
+//NOTE: the code below concatenates the service ID to the path
 function getServiceCard(serviceID) {
     $.getJSON(`/api/services/${serviceID}`, (service) => {
             let cardTitle = $("#cardTitle");
