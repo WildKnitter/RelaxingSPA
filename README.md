@@ -47,6 +47,6 @@ scripts (your js scripts other than server.js)
 **App listening at port 8081**
 
 - To view your page in the browser, you would go to:
-http://localhost:8081/index.html
+http://localhost:8081/
 
 
