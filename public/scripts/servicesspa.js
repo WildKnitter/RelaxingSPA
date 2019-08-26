@@ -27,7 +27,6 @@ categegory[i].Value
 */
 
 $(function() {
-
     $("#dropdownMenuButton").hide();
     $("#categoryName").hide();
     $("#serviceCard").hide();
@@ -36,6 +35,7 @@ $(function() {
         getCategories();
         $("#viewCategories").prop("disabled", true);
         $("#dropdownMenuButton").show();
+        $(".transbox").hide();
     });
 });
 
@@ -45,7 +45,8 @@ function getCategories() {
     //    let categoryList = $("#categoryList");
     $.getJSON('/api/categories/', (categories) => {
             $.each(categories, (index, category) => {
-                    $("#categoryList").append($("<a />")
+                    $("#categoryList").append(
+                        $("<a />")
                         .attr("class", "dropdown-item")
                         .text(category.Category)
                         .attr("data-code", category.Value)
@@ -68,7 +69,6 @@ function getCategories() {
 // getServices Function to fill the second dropdown SELECT A CATEGORY
 function getServices(category) {
     $("#serviceCard").hide();
-
     let servicesList = $("#servicesList");
     servicesList.html("");
 
@@ -98,13 +98,25 @@ function getServices(category) {
 function getServiceCard(serviceID) {
     $.getJSON(`/api/services/${serviceID}`, (service) => {
             let cardTitle = $("#cardTitle");
-            let cardText1 = $("#cardText1");
-            let cardText2 = $("#cardText2");
-            let cardText3 = $("#cardText3");
             cardTitle.html(service.ServiceName);
-            cardText1.html(service.Description);
-            cardText2.html(service.Minutes + " minutes");
-            cardText3.html("$" + Number(service.Price).toFixed(2));
+            $(".card-body").append(
+                $("<p />")
+                .attr("class", "card-text")
+                .attr("id", "cardtext1")
+                .html(service.Description)
+            ); // end of cardtext1 append parenthesis
+            $(".card-body").append(
+                $("<p />")
+                .attr("class", "card-text")
+                .attr("id", "cardtext2")
+                .html(service.Minutes + " minutes")
+            ); // end of cardtext2 append parenthesis
+            $(".card-body").append(
+                $("<p />")
+                .attr("class", "card-text")
+                .attr("id", "cardtext3")
+                .html("$" + Number(service.Price).toFixed(2))
+            ); // end of cardtext3 append parenthesis
             $("#serviceCard").show();
         } // end of the services function
     ); // end of .getJSON
